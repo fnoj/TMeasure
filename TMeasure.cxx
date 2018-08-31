@@ -19,6 +19,7 @@
 //                                                                       //
 ///////////////////////////////////////////////////////////////////////////
 
+
 #include "TMeasure.h"
 
 
@@ -95,8 +96,8 @@ TMeasure Exp(TMeasure m1){
 
 TMeasure Ln(TMeasure m1){
   TMeasure ans;
-  ans.fx= TMath::Ln(m1.GetX());
-  ans.fdx= m1.dfx/m1.GetX();
+  ans.fx= TMath::Log(m1.GetX());
+  ans.fdx= m1.fdx/m1.GetX();
   return ans;
 }
 
@@ -107,6 +108,6 @@ TMeasure Pow(TMeasure m1,Double_t n){
   return ans;
 }
 
-TMeasure::Print(){
+void TMeasure::Print(){
   cout<<fx<<" +- "<<fdx<<endl;
 }

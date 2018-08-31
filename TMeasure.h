@@ -47,10 +47,9 @@ public:
   Double_t GetDx(){return fdx;}
   void SetX(Double_t x){fx=x;}
   void SetDx(Double_t dx){fdx=dx;}
-  void Print(){}
+  void Print();
 
 private:
   Double_t fx;
   Double_t fdx;
-
 };
